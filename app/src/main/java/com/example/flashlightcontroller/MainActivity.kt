@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             cameraManager.setTorchMode(cameraId, isChecked)
             binding.tvFlashlightStatus.text = if (isChecked) "ON" else "OFF"
         } catch (e: CameraAccessException) {
-
+            println(e)
         } finally {
             Log.d("Try", "Tried")
         }
